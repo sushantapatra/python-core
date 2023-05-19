@@ -322,8 +322,142 @@ While Loop
 In Python, a while loop is used to repeatedly execute a block of code as long as a certain condition is true. It allows you to keep executing the code block until the condition becomes false. The general syntax of a while loop in Python is as follows:
 """
 
-num = 1
+# num = 1
 
-while num <= 5:
-    print(num)
-    num += 1
+# while num <= 5:
+#     print(num)
+#     num += 1
+
+"""
+Function
+
+In Python, a function is a block of code that performs a specific task and can be called and executed at any point in a program. Functions allow you to organize your code into reusable components, improving code readability and maintainability.
+
+Defining a Function:
+A function in Python is defined using the def keyword, followed by the function name, parentheses (which may contain parameters), and a colon. The general syntax for defining a function is as follows:
+
+Functions can accept a variable number of arguments using special syntax. The *args parameter allows you to pass multiple positional arguments, and the **kwargs parameter allows you to pass multiple keyword arguments. Here's an example:
+"""
+
+
+# def greet(name):
+#     print("Hello, " + name + "!")
+
+
+# # Calling the function
+# greet("Alice")
+
+
+# def add(a, b):
+#     return a + b
+
+
+# result = add(3, 5)
+# print(result)
+
+# # Default Parameters:
+# def greet(name, greeting="Hello"):
+#     print(greeting + ", " + name + "!")
+
+
+# greet("Alice")
+# greet("Bob", "Hi")
+
+# Variable-Length Arguments:
+'''
+In the above example, the print_arguments function accepts multiple positional arguments using *args and multiple keyword arguments using **kwargs. It then prints the arguments.
+'''
+
+# def print_arguments(*args, **kwargs):
+#     for arg in args:
+#         print(arg)
+
+#     for key, value in kwargs.items():
+#         print(key + ": " + str(value))
+
+
+# print_arguments("apple", "banana", name="Alice", age=25)
+
+# def avarage(*numbers):
+#     sum = 0
+#     for n in numbers:
+#         sum += n
+
+#     return sum/len(numbers)
+
+
+# avg = avarage(10, 2, 23, 4, 5)
+# print(avg)
+
+# Lambda Functions (Anonymous Functions):
+# Lambda functions are small, anonymous functions that are defined without a name. They are typically used for short, one-line functions. Here's an example:
+
+
+# def add(x, y): return x + y
+
+
+# result = add(3, 5)
+# print(result)
+
+# Decorators:
+'''Decorators are functions that wrap other functions to enhance their functionality. They allow you to modify the behavior of a function without changing its source code. Decorators are denoted by the @ symbol followed by the decorator name, placed above the function definition. Here's an example:
+In the above example, the uppercase_decorator function is a decorator that converts the result of the decorated function to uppercase. The greet function is decorated with @uppercase_decorator, so the output is in uppercase.
+'''
+
+
+# def uppercase_decorator(func):
+#     def wrapper():
+#         result = func()
+#         return result.upper()
+
+#     return wrapper
+
+
+# @uppercase_decorator
+# def greet():
+#     return "hello, world"
+
+
+# print(greet())
+
+"""
+List
+
+In Python, a list is a built-in data type that represents an ordered collection of items. Lists are mutable, meaning they can be modified after they are created. They can contain elements of different data types, such as integers, floats, strings, or even other lists. Lists are defined using square brackets [ ], and the elements are separated by commas. Here's an example of creating a list:
+
+"""
+# my_list = [1, 2, 3, 4, 5]
+
+# # print(type(my_list)) #<List>
+# print(my_list)
+# # Accessing Elements:
+# # You can access individual elements of a list using indexing. The first element is at index 0, the second element at index 1, and so on. Negative indices can be used to access elements from the end of the list. Here's an example:
+# print(my_list[0])    # Output: 1
+# print(my_list[2])    # Output: 3
+# print(my_list[-1])   # Output: 5 (last element)
+
+# # Modifying Elements:
+# # Since lists are mutable, you can modify individual elements by assigning new values to specific indices. Here's an example:
+# my_list = [1, 2, 3, 4, 5]
+# print(my_list)    # Output: [1, 2, 3, 4, 5]
+# my_list[2] = 7
+# print(my_list)    # Output: [1, 2, 7, 4, 5]
+
+# # List Methods:
+# # Lists come with several built-in methods that allow you to manipulate and perform operations on them. Some commonly used methods include append(), extend(), insert(), remove(), pop(), sort(), and reverse(). Here's an example:
+# my_list = [1, 2, 3]
+# my_list.append(4)         # Add an element at the end
+# my_list.extend([5, 6])    # Extend the list with another list
+# my_list.insert(0, 0)      # Insert an element at a specific index
+# my_list.remove(3)         # Remove the first occurrence of an element
+# popped_element = my_list.pop()     # Remove and return the last element
+# my_list.sort()            # Sort the list in ascending order
+# my_list.reverse()         # Reverse the order of elements
+# print(my_list)            # Output: [6, 5, 4, 2, 1, 0]
+
+
+# List Slicing:
+# You can extract a portion of a list using slicing, which allows you to create a new list containing a subset of the original elements. Here's an example:
+my_list = [1, 2, 3, 4, 5]
+subset = my_list[1:4]    # Extract elements from index 1 to 3 (exclusive)
+print(subset)            # Output: [2, 3, 4]
