@@ -34,3 +34,9 @@ pip install package_name
 #4. **Deactivate the virtual environment:** When you're done working in the virtual environment, you can deactivate it using the following command:
 
 deactivate
+
+
+
+#To generate a requirements.txt 
+pip freeze > requirements.txt
+pip install -r requirements.txt

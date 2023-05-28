@@ -913,8 +913,3 @@ enumerate(iterable, start=0)
 # name = "Suahnatpatra"
 # for index, letter in enumerate(name, start=0):
 #     print(f"Index: {index}, letter: {letter}")
-
-#To generate a requirements.txt 
-pip freeze > requirements.txt
-pip install -r requirements.txt
-
