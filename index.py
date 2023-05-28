@@ -456,8 +456,465 @@ In Python, a list is a built-in data type that represents an ordered collection 
 # print(my_list)            # Output: [6, 5, 4, 2, 1, 0]
 
 
-# List Slicing:
-# You can extract a portion of a list using slicing, which allows you to create a new list containing a subset of the original elements. Here's an example:
-my_list = [1, 2, 3, 4, 5]
-subset = my_list[1:4]    # Extract elements from index 1 to 3 (exclusive)
-print(subset)            # Output: [2, 3, 4]
+# # List Slicing:
+# # You can extract a portion of a list using slicing, which allows you to create a new list containing a subset of the original elements. Here's an example:
+# my_list = [1, 2, 3, 4, 5]
+# subset = my_list[1:4]
+# # Extract elements from index 1 to 3 (exclusive)
+# print(subset)            # Output: [2, 3, 4]
+# m = my_list.copy()
+# my_list.insert(1, 115)
+
+# print(my_list)
+
+"""
+Tuple
+
+In Python, tuples are similar to lists, but they are immutable, meaning their elements cannot be modified once created. Here are some commonly used functions and methods for working with tuples:
+
+1. `len(tuple)`: Returns the number of elements in the tuple.
+
+2. `tuple.count(value)`: Returns the number of occurrences of a value in the tuple.
+
+3. `tuple.index(value, start=0, end=len(tuple))`: Returns the index of the first occurrence of a value in the tuple. You can also specify a start and end index for the search.
+
+4. `tuple + other_tuple`: Concatenates two tuples, creating a new tuple that contains all the elements from both tuples.
+
+5. `tuple * n`: Creates a new tuple by repeating the original tuple n times.
+
+6. `tuple[i]`: Accesses the element at index i in the tuple.
+
+7. `tuple[start:end]`: Returns a new tuple containing elements from start index up to, but not including, the end index.
+
+8. `tuple[:end]`: Returns a new tuple containing elements from the beginning up to, but not including, the end index.
+
+9. `tuple[start:]`: Returns a new tuple containing elements from the start index to the end of the tuple.
+
+10. `tuple[::-1]`: Reverses the order of the elements in the tuple, creating a new tuple.
+
+11. `sorted(tuple)`: Returns a new tuple with the elements sorted in ascending order.
+
+12. `tuple.index(value)`: Returns the index of the first occurrence of a value in the tuple.
+
+These functions and methods provide basic operations for working with tuples in Python. Remember that since tuples are immutable, you cannot modify their elements directly. If you need to modify or manipulate the elements, you may need to convert the tuple to a list, perform the desired operations, and then convert it back to a tuple if necessary.
+"""
+
+# my_tuple = (1, 2, 1, 4, "sushanta")
+
+# print(my_tuple)
+# print(my_tuple.count(1))
+# print(my_tuple * 5)
+# print(sorted(my_tuple))
+# print(my_tuple.index(2))
+
+"""
+Recursion
+
+In Python, we know that a function can call other functions. It is even possible for the function to call itself. These types of construct are termed as recursive functions.
+"""
+
+
+# def factorial(n):
+#     if (n == 0 or n == 1):
+#         return 1
+#     else:
+#         return n * factorial(n-1)
+
+
+# print(factorial(10))
+
+
+"""
+Fibonacci Sequence
+f(0) =0
+f(1) =1
+f(2) =f(1) + f(0)
+f(n) = f(n-1) + f(n-2)
+0 1 1 2 3 5 8 13 21 
+"""
+
+
+# def fibonacci(n):
+#     if n <= 0:
+#         return []
+#     elif n == 1:
+#         return [0]
+#     elif n == 2:
+#         return [0, 1]
+#     else:
+#         sequence = fibonacci(n - 1)
+#         sequence.append(sequence[-1] + sequence[-2])
+#         return sequence
+
+
+# print(fibonacci(10))  # Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+
+"""
+Sets
+In Python, a set is an unordered collection of unique elements. Sets are defined using curly braces {} or the set() function. Here are some common operations and methods that you can perform with sets in Python:
+"""
+# my_set = {'sushanta', 1, 2, 'Hello', 3, True}  # Using curly braces
+# another_set = set([4, 5, 6])  # Using set() function
+# print(my_set, another_set)
+
+# empty_set_wrongway = {}  # you cant't declare empty set. wrong way , OUTPUT : Dict
+# empty_set = set()  # right way to declare empty set
+# print(type(empty_set))
+
+# # Add Element
+# my_set = {1, 2, 3}
+# my_set.add(4)
+# print(my_set)  # Output: {1, 2, 3, 4}
+
+
+# # Remove Element
+# my_set = {1, 2, 3, 4}
+# my_set.remove(2)
+# print(my_set)  # Output: {1, 3, 4}
+
+
+# # Discard/Remove Element
+# my_set = {1, 2, 3, 4}
+# my_set.discard(2)
+# my_set.discard(5)  # No error raised
+# print(my_set)  # Output: {1, 3, 4}
+
+
+# # pop(): Removes and returns an arbitrary element from the set. Raises a KeyError if the set is empty.
+# my_set = {1, 2, 3, 4}
+# my_set.discard(2)
+# my_set.discard(5)  # No error raised
+# print(my_set)  # Output: {1, 3, 4}
+
+
+# # clear(): Removes all elements from the set, making it an empty set.
+# my_set = {1, 2, 3, 4}
+# my_set.clear()
+# print(my_set)  # Output: set()
+
+
+# # union(other_set): Returns a new set that contains all elements from both the set and the other_set.
+# set1 = {1, 2, 3}
+# set2 = {3, 4, 5}
+# union_set = set1.union(set2)
+# print(union_set)  # Output: {1, 2, 3, 4, 5}
+
+
+# # intersection(other_set): Returns a new set that contains only the elements that are common to both the set and the other_set.
+# set1 = {1, 2, 3}
+# set2 = {3, 4, 5}
+# intersection_set = set1.intersection(set2)
+# print(intersection_set)  # Output: {3}
+
+
+# # difference(other_set): Returns a new set that contains the elements from the set that are not in the other_set.
+# set1 = {1, 2, 3}
+# set2 = {3, 4, 5}
+# difference_set = set1.difference(set2)
+# print(difference_set)  # Output: {1, 2}
+
+
+# # symmetric_difference(other_set): Returns a new set that contains the elements that are in either the set or the other_set, but not both.
+# set1 = {1, 2, 3}
+# set2 = {3, 4, 5}
+# symmetric_diff_set = set1.symmetric_difference(set2)
+# print(symmetric_diff_set)  # Output: {1, 2, 4, 5}
+
+
+"""
+Dictionaries
+
+In Python, a dictionary is a collection of key-value pairs enclosed in curly braces {}. It is also known as an associative array or a hash map. Dictionaries are mutable, unordered, and allow duplicate values for keys. Here's an overview of working with dictionaries in Python:
+
+Creating a Dictionary:
+You can create a dictionary by enclosing comma-separated key-value pairs within curly braces {} or by using the dict() constructor.
+
+"""
+
+# # Using curly braces
+# my_dict = {'key1': 'value1', 'key2': 'value2', 'key3': 'value3'}
+
+# # Using dict() constructor
+# my_dict = dict(key1='value1', key2='value2', key3='value3')
+
+# Accessing Values:
+# my_dict = {'name': 'John', 'age': 25, 'city': 'New York'}
+# print(my_dict['name'])  # Output: John
+# print(my_dict['age'])  # Output: 25
+# # Output:  if not found any key to return none
+# print(my_dict.get('hello'))
+# # Output: if not found any key to return error
+# print(my_dict['hello'])
+
+# print(my_dict.items())
+# for key, value in my_dict.items():
+#     print(key, value, sep=" => ")
+
+
+# # 1. **len()**: Returns the number of key-value pairs in a dictionary.
+
+# my_dict = {'a': 1, 'b': 2, 'c': 3}
+# print(len(my_dict))  # Output: 3
+
+# # 2. **keys()**: Returns a list containing all the keys in the dictionary.
+
+# my_dict = {'a': 1, 'b': 2, 'c': 3}
+# print(my_dict.keys())  # Output: dict_keys(['a', 'b', 'c'])
+
+# # 3. **values()**: Returns a list containing all the values in the dictionary.
+
+# my_dict = {'a': 1, 'b': 2, 'c': 3}
+# print(my_dict.values())  # Output: dict_values([1, 2, 3])
+
+# # 4 . **items()**: Returns a list of tuples containing key-value pairs.
+
+# my_dict = {'a': 1, 'b': 2, 'c': 3}
+# print(my_dict.items())  # Output: dict_items([('a', 1), ('b', 2), ('c', 3)])
+
+# # 5. **get()**: Returns the value associated with a specified key. If the key does not exist, it returns a default value (None by default).
+
+# my_dict = {'a': 1, 'b': 2, 'c': 3}
+# print(my_dict.get('a'))  # Output: 1
+# print(my_dict.get('d'))  # Output: None
+# print(my_dict.get('d', 'Key not found'))  # Output: Key not found
+
+# # 6. **pop()**: Removes and returns the value associated with a specified key. If the key does not exist, it returns a default value (if provided) or raises a KeyError.
+
+# my_dict = {'a': 1, 'b': 2, 'c': 3}
+# print(my_dict.pop('b'))  # Output: 2
+# print(my_dict)  # Output: {'a': 1, 'c': 3}
+
+# # 7. **popitem()**: Removes and returns the last inserted key-value pair as a tuple. Raises a KeyError if the dictionary is empty.
+
+# my_dict = {'a': 1, 'b': 2, 'c': 3}
+# print(my_dict.popitem())  # Output: ('c', 3)
+# print(my_dict)  # Output: {'a': 1, 'b': 2}
+
+# # 8. **clear()**: Removes all key-value pairs from the dictionary, making it empty.
+
+# my_dict = {'a': 1, 'b': 2, 'c': 3}
+# my_dict.clear()
+# print(my_dict)  # Output: {}
+
+"""
+For Loop With else condition
+Python's `for` loop is a versatile construct that allows you to iterate over elements in a sequence or any iterable object. Here are some advanced features and techniques you can use with `for` loops in Python:
+
+"""
+# # 1. **Iterating over a range of numbers**: You can use the `range()` function to generate a sequence of numbers and iterate over them.
+
+# for i in range(5):
+#     print(i)  # Output: 0 1 2 3 4
+# else:
+#     print('not in i')
+
+# # 2. **Iterating over a list or other iterable**: You can iterate over elements in a list, string, tuple, or any other iterable object.
+
+# fruits = ['apple', 'banana', 'cherry']
+# for fruit in fruits:
+#     print(fruit)  # Output: apple banana cherry
+
+# name = "John Doe"
+# for char in name:
+#     print(char)  # Output: J o h n   D o e
+
+# # 3. **Enumerating elements**: You can use the `enumerate()` function to iterate over elements along with their indices.
+
+# fruits = ['apple', 'banana', 'cherry']
+# for index, fruit in enumerate(fruits):
+#     print(index, fruit)  # Output: 0 apple   1 banana   2 cherry
+
+# # 4. **Iterating over dictionaries**: You can iterate over the keys, values, or key-value pairs of a dictionary using the `items()`, `keys()`, or `values()` methods.
+
+# my_dict = {'a': 1, 'b': 2, 'c': 3}
+# for key in my_dict:
+#     print(key)  # Output: a b c
+
+# for value in my_dict.values():
+#     print(value)  # Output: 1 2 3
+
+# for key, value in my_dict.items():
+#     print(key, value)  # Output: a 1   b 2   c 3
+
+# # 5. **Skipping iterations with `continue`**: You can use the `continue` statement to skip the rest of the code in the current iteration and move to the next iteration.
+
+# for i in range(10):
+#     if i % 2 == 0:
+#         continue
+#     print(i)  # Output: 1 3 5 7 9
+
+# # 6. **Breaking out of the loop with `break`**: You can use the `break` statement to exit the loop prematurely.
+
+# for i in range(10):
+#     if i == 5:
+#         break
+#     print(i)  # Output: 0 1 2 3 4
+
+# # 7. **Nested loops**: You can have one or more loops inside another loop, allowing you to iterate over multiple dimensions or nested structures.
+
+# for i in range(3):
+#     for j in range(2):
+#         print(i, j)  # Output: (0, 0) (0, 1) (1, 0) (1, 1) (2, 0) (2, 1)
+
+
+"""
+Exception Handling
+In Python, errors and exceptions are used to indicate that something unexpected or erroneous has occurred during the execution of a program. Python provides several types of errors, and you can handle them using exception handling mechanisms. Here are some common types of errors and exception handling techniques in Python:
+"""
+# #1. **SyntaxError**: Occurs when there is a mistake in the syntax of the code. It is raised by the Python interpreter during the parsing phase.
+
+# # SyntaxError: invalid syntax
+# print "Hello, World!"
+
+
+# 2. **IndentationError**: Occurs when there is an incorrect indentation in the code. It typically happens when the indentation level is inconsistent.
+
+# # IndentationError: unexpected indent
+# if True:
+# print("Indentation is important in Python!")
+
+
+# # 3. **NameError**: Occurs when a variable or name is not found in the current scope or namespace.
+
+# # NameError: name 'x' is not defined
+# print(x)
+
+
+# # 4. **TypeError**: Occurs when an operation is performed on an object of an inappropriate type.
+
+# # TypeError: unsupported operand type(s) for +: 'int' and 'str'
+# x = 5 + "hello"
+
+
+# 5. **ValueError**: Occurs when a function receives an argument of the correct type but an inappropriate value.
+
+# # ValueError: invalid literal for int() with base 10: 'abc'
+# x = int("abc")
+
+
+# # 6. **IndexError**: Occurs when you try to access an index that is out of range for a sequence (list, string, tuple).
+
+# # IndexError: list index out of range
+# my_list = [1, 2, 3]
+# print(my_list[3])
+
+
+# # 7. **KeyError**: Occurs when you try to access a dictionary key that doesn't exist.
+
+# # KeyError: 'c'
+# my_dict = {'a': 1, 'b': 2}
+# print(my_dict['c'])
+
+
+"""
+Exception handling allows you to catch and handle these errors gracefully, preventing the program from crashing. The `try-except` statement is used for exception handling in Python.
+
+Built-in exceptions: IndexError, ValueError, and NameError.
+User-defined exceptions: Exception  
+
+try:
+  # code that might raise an exception
+    x = 5 / 0
+except Exception as e:
+  # code to handle the exception
+    print(e)
+    
+"""
+
+# try:
+#     # Code that may raise an exception
+#     x = 5 / 0  # ZeroDivisionError: division by zero
+# except ZeroDivisionError:
+#     # Handling the specific exception
+#     print("Cannot divide by zero!")
+
+
+# You can also use the `else` block to execute code if no exceptions occur, and the `finally` block to specify code that should be executed regardless of whether an exception occurred or not.
+
+# try:
+#     # Code that may raise an exception
+#     x = 5 / 2
+# except ZeroDivisionError:
+#     # Handling the specific exception
+#     print("Cannot divide by zero!")
+# else:
+#     # Code that executes if no exceptions occur
+#     print("Division successful!")
+# finally:
+#     # Code that always executes
+#     print("Execution complete!")
+
+# try:
+#   # code that might raise an exception
+#     x = 5 / 0
+# except Exception as e:
+#   # code to handle the exception
+#     print(e)
+
+
+# try:
+#     list[10]
+# except IndexError:
+#     print("IndexError occurred")
+# else:
+#     print("No exception occurred")
+
+
+"""
+Raising custom Error using raise keyword : ValueError,Exception, KeyError
+To create an error in Python, you can raise an exception explicitly using the `raise` statement. Here's an example of how to create and raise a custom error:
+
+"""
+
+
+"""In this example, we have a function called `my_function()`. Inside the function, we check for a certain condition using an `if` statement. If the condition is met, we raise a `ValueError` exception using the `raise` statement. The `ValueError` class is a built-in exception class in Python that represents a generic value-related error.
+
+Outside the function, we wrap the call to `my_function()` inside a `try-except` block to catch the `ValueError` exception specifically. If the `ValueError` is raised, the code inside the `except` block will be executed. In this example, we print the error message using `str(e)`, which displays the error message associated with the exception.
+
+You can replace `ValueError` with any other built-in exception class like `TypeError`, `NameError`, or create your own custom exception class by subclassing `Exception`. By raising and catching exceptions, you can effectively handle and communicate errors within your Python code."""
+
+
+# def my_function(age):
+#     # Check for a condition
+#     if age < 21:
+#         # Raise a custom error
+#         raise ValueError("A custom error occurred: you are not a adult")
+
+
+# # Call the function and catch the error
+# try:
+#     my_function(20)
+# except ValueError as e:
+#     print("Custom error occurred:", str(e))
+
+
+"""
+short hand if else statement in python
+value_if_true if condition else value_if_false
+
+"""
+# x = 5
+# result = "Even" if x % 2 == 0 else "Odd"
+# print(result)
+
+"""
+Enumerate Function 
+
+The enumerate() function in Python is a built-in function that allows you to iterate over an iterable (such as a list, tuple, or string) while also providing an index for each item in the iterable. It returns an enumerate object, which can be used in a loop or converted to other data structures.
+
+enumerate(iterable, start=0)
+
+"""
+# fruits = ['apple', 'banana', 'mango', 'orange']
+
+# for index, fruit in enumerate(fruits, start=1):
+#     print(f"Index: {index}, Fruit: {fruit}")
+
+# name = "Suahnatpatra"
+# for index, letter in enumerate(name, start=0):
+#     print(f"Index: {index}, letter: {letter}")
+
+#To generate a requirements.txt 
+pip freeze > requirements.txt
+pip install -r requirements.txt
+
